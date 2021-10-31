@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(233, 47%, 7%);
+  color: hsla(0, 0%, 100%, 0.75);
+  text-align: center;
+  font-size: 18px;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+  font-family: "Inter", sans-serif;
+  padding-top: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
+  letter-spacing: 0.7px;
+  color: hsl(0, 0%, 100%);
+}
+
+.mainP {
+  color: hsla(0, 0%, 100%, 0.6);
+  padding: 15px 40px;
+  padding-bottom: 20px;
+  line-height: 1.7;
+  font-size: 18px;
+}
+
+.card {
+  display: grid;
+  row-gap: 30px;
+  padding-bottom: 50px;
+  align-items: center;
+  margin: 100px auto;
+  width: 90%;
+  justify-content: center;
+  background-color: hsl(244, 38%, 16%);
+  border: 1px solid hsl(244, 38%, 16%);
+  border-radius: 20px;
+  width: 90%;
+}
+
+.image {
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  min-height: 250px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 0;
+  background-size: contain;
+  padding-bottom: 0;
+  position: relative;
+  font-size: 0;
+}
+
+img {
+  width: 100%;
+  min-height: 250px;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  content: "";
+  background-color: rgba(170, 92, 219);
+  mix-blend-mode: multiply;
+}
+
+.highlightText {
+  color: rgba(170, 92, 219);
+}
+
+.desktopImg {
+  display: none;
+}
+
+.number {
+  color: hsl(0, 0%, 100%);
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+.item {
+  color: hsla(0, 0%, 100%, 0.6);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  padding-top: 10px;
+  padding-bottom: 25px;
+}
+
+@media (min-width: 480px) {
+  .card {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 720px) {
+  .card {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .card {
+    max-width: 1280px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 60% 40%;
+    gap: 0;
+    border-radius: 5px;
+    padding-bottom: 0;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: 28% 28% 28%;
+    gap: 0;
+    padding-left: 90px;
+    text-align: left;
+    align-items: center;
+    padding-top: 30px;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .image {
+    grid-row: -3/-1;
+    height: 100%;
+    border-radius: 0;
+    background: url("images/image-header-desktop.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .mainDescription {
+    padding-top: 80px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 75px;
+  }
+
+  .mainP {
+    font-size: 16px;
+  }
+
+  h1 {
+    padding-bottom: 15px;
+  }
+
+  .number {
+    font-size: 18px;
+  }
+
+  .item {
+    font-size: 12px;
+  }
+}
